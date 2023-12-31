@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <TITLE>Academics</TITLE>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            } 
+        
+            body{
+                background: #9BA4B5;
+            }
+
+            nav{
+                background: #394867;
+                height: 70px;
+                width: 100%;
+            }
+
+            label.schoolName{
+                color: #F1F6F9;
+                font-family: 'Sora', sans-serif;
+                font-size: 25px;
+                line-height: 70px;
+                padding: 0 50px;  
+            }
+
+            nav ul{
+                float: right;
+                margin-right: 20px;
+            }
+
+            nav ul li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+
+            nav ul li a{
+                color: #F1F6F9;
+                font-family: 'Comfortaa', sans-serif;
+                font-size: 14px;
+                padding: 7px 13px;
+                border-radius: 3px;
+            }
+
+           a.active,a:hover{
+            background-color: #58698a;
+            transition: .5s;
+           } 
+
+           .checkbtn{
+            font-size: 25px;
+            color:#F1F6F9;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+           }
+
+           #check{
+            display: none;
+           }
+
+           @media (max-width: 1194px){
+            label.schoolName{
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            nav ul li a{
+                font-size: 12px;
+            }
+           }
+
+           @media (max-width: 1020px){
+                .checkbtn{
+                    display: block;
+                }
+                label.schoolName{
+                    font-size: 17px;
+                }
+                ul{
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background:#18233a;
+                    top: 70px;
+                    left: -100%;
+                    text-align: center;
+                    transition: all .5s;
+                }
+                nav ul li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                }
+
+                nav ul li a{
+                    font-size: 20px;
+                }
+                a:hover,a.active{
+                    background: none;
+                    color: #58698a;
+                }
+                #check:checked ~ ul{
+                    left:0;
+                }
+           }
+
+           footer{
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+           }
+
+           .intro{
+                padding: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+           }
+
+           .boxArea{
+                width: 80%;
+                margin: 25px;
+                padding: 40px;
+                background-color: #F1F6F9;
+                border-radius: 25px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+           }
+
+           .boxArea h6{
+            margin-bottom: 10px;
+            color: #18233a;
+            font-size: 35px;
+            font-family: 'Sora', sans-serif;
+            align-items: center;
+           }
+
+           .boxArea p{
+            font-family: 'Comfortaa', sans-serif;
+            color: #18233a;
+            font-size: 16px;
+           }
+
+           .row{
+            width: 80%;
+            max-width: 1320px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 50px 30px;
+           }
+
+           .row .left{
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+           }
+
+           .row .left img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+           }
+
+           .row .right img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+           }
+
+           .row .right{
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+           }
+
+           .row .right .content{
+            padding-left: 20px;
+           }
+
+           .row .left .content{
+            padding-left: 20px;
+           }
+
+           .row .right .content p{
+            font-size: 23px;
+            line-height: 26px;
+            padding-bottom: 15px;
+            font-family: 'Comfortaa', sans-serif;
+            color: #18233a;
+           }
+
+           .row .left .content p{
+            font-size: 23px;
+            line-height: 26px;
+            padding-bottom: 15px;
+            font-family: 'Comfortaa', sans-serif;
+            color: #18233a;
+           }
+
+           .container{
+                padding: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+           }
+
+           .buttons{
+                width: 300px;
+                margin: 10px;
+                padding: 20px;
+                background-color: #18233a;
+                border-radius: 25px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                transition: all .5s ease-in-out;
+           }
+
+           .buttons h1{
+            margin-bottom: 5px;
+            color: #F1F6F9;
+            font-size: 20px;
+            font-family: 'Sora', sans-serif;
+            
+           }
+
+           .buttons:hover{
+            background-color: #F1F6F9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+           }
+
+           .buttons:hover h1{
+                color: #18233a;
+           }
+
+           @media (max-width: 991px){
+            .row .right .content{
+                padding-left: 0;
+            }
+           }
+           .row .left .content{
+                padding-left: 0;
+            }
+
+            .boxArea h6{
+                font-size: 25px;
+            }
+
+           @media (max-width: 768px){
+            .row{
+                width: 90%;
+                grid-template-columns: 1fr;
+            }
+           }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="schoolName">CANTERBURY HIGH SCHOOL</label>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a class="active" href="academics.html">ACADEMICS</a></li>
+                <li><a href="extracurriculars.html">EXTRA-CURRICULARS</a></li>
+                <li><a href="contacts.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <footer>
+            <div class="intro">
+                <div class="boxArea">   
+                    <h6>[ Biology Laboratory ]</h6>
+                    <p>
+                        In this website, we aim to guide you through our performed
+                        laboratory experiment regarding the digestive system. Understanding
+                        our digestive system will allow us to gain a better idea on how
+                        other life forms digest their food. Understadnf the process of
+                        digestion may help us become more conscious of what we consume and
+                        what we put our bodies through. This simulation will help us understand
+                        several aspects of the process such as how the stomach moves and how
+                        food goes through the small intestine.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <img src="image1.png" alt="">
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <p>
+                            In doing our experiment, we first put bananas and crackers into
+                            a zip-locked bag, as well as water and orange juice. After that
+                            we crushed the contents of the bag. In doing this step, we figured
+                            out that the food that is being "digested" is the bananas and
+                            cracker while the water and orange juice represents the saliva
+                            and digestive juices as they both help in digestion as well as
+                            helping in crushing the food into a mushy substance. This means
+                            that the crushing of the food inside of the plastic bag represents
+                            and mimics the process of the stomach's digestion. Because of the
+                            mixture of the bananas and the crakcers we think that the food
+                            contains carbohydrates, proteins, lipids, and nucleic acids.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left">
+                    <div class="content">
+                        <p>
+                            In the next process shown, the liquid flowing out of the stocking
+                            simulates the absorption of nutrients into the body. Correspondingly,
+                            the tray through which the liquid flows through represents the body.
+                            Inside the stocking, what remains is identified as partially digested
+                            waste. This residual material sets the stage for the step where the
+                            partially solidified contents are pushed, symbolizing the effective
+                            elimination of waste resulting from the digestive process. In essence,
+                            these stages, from nutrient absorption to waste elimination, offer a
+                            comprehensive understanding of the dynamic digestive system at play.
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="image2.png" alt="">
+                </div>
+                
+                <div class="left">
+                    <img src="image3.png" alt="">
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <p>
+                            Among the paper towels tested, the one with four folds  absorbed the
+                            largest amount of water. This observation suggests that the act of
+                            folding the paper towel allows more space for water absorption. Drawing
+                            a parallel to the human digestive system, the organ analogous to the
+                            paper towel is the small intestine. The small intestine's structure,
+                            characterized by numerous small folds known as villi, plays a crucial
+                            role in the absorption of nutrients. In this comparison, the efficiency
+                            of water absorption in the folded paper towel mirrors the effectiveness
+                            of nutrient absorption in the small intestine, emphasizing the significance
+                            of structural features in the absorption processes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left">
+                    <div class="content">
+                        <p>
+                            In the bile simulation experiment, we mixed liquid soap and oil, as
+                            well as oil and just water. We observed that mixing Oil and liquid soap
+                            caused liquid to emulsify, while the oil and water without soap in the
+                            other container did not combine or react. This happened because of a
+                            certain chemical both present in the liquid soap and bile which breaks
+                            down the fat in the oil/food that we eat. Thus, the bile created in our
+                            livers are a part of the chemical digestion.
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="image4.png" alt="">
+                </div>
+            </div>
+            <div class="container">
+                <div class="buttons">
+                    <a href="academics.html">
+                        <h1>Go Back</h1>
+                    </a>
+                </div>
+
+                <div class="buttons">
+                    <a href="english-sonnets.html">
+                        <h1>Sonnets Collection</h1>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
