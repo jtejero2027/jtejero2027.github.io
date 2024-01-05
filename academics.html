@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <TITLE>Academics</TITLE>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            } 
+        
+            body{
+                background: #9BA4B5;
+                width: 100%;
+            }
+
+            nav{
+                background: #394867;
+                height: 70px;
+                max-width: 100%;
+            }
+
+            label.schoolName{
+                color: #F1F6F9;
+                font-family: 'Sora', sans-serif;
+                font-size: 25px;
+                line-height: 70px;
+                padding: 0 50px;  
+                
+            }
+
+            nav ul{
+                float: right;
+                margin-right: 20px;
+                
+            }
+
+            nav ul li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+
+            nav ul li a{
+                color: #F1F6F9;
+                font-family: 'Comfortaa', sans-serif;
+                font-size: 14px;
+                padding: 7px 13px;
+                border-radius: 3px;
+            }
+
+           a.active,a:hover{
+            background-color: #58698a;
+            transition: .5s;
+           } 
+
+           .checkbtn{
+            font-size: 25px;
+            color:#F1F6F9;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+           }
+
+           #check{
+            display: none;
+           }
+
+           @media (max-width: 1194px){
+            label.schoolName{
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            nav ul li a{
+                font-size: 12px;
+            }
+           }
+
+           @media (max-width: 1020px){
+                .checkbtn{
+                    display: block;
+                }
+                label.schoolName{
+                    font-size: 17px;
+                }
+                ul{
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background:#18233a;
+                    top: 70px;
+                    left: -100%;
+                    text-align: center;
+                    transition: all .5s;
+                }
+                nav ul li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                }
+
+                nav ul li a{
+                    font-size: 20px;
+                }
+                a:hover,a.active{
+                    background: none;
+                    color: #58698a;
+                }
+                #check:checked ~ ul{
+                    left:0;
+                }
+           }
+
+            footer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                width: 100%;
+                text-align: center;
+           }
+
+           .container{
+                padding: 10vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+           }
+
+           .boxArea{
+                width: 250px;
+                margin: 25px;
+                padding: 40px;
+                background-color: #18233a;
+                transition: all .5s ease-in-out;
+                border-radius: 25px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+           }
+
+           .boxArea .icon{
+            width: 100%;
+            margin-bottom: 40px;
+           }
+
+           .icon i{
+            font-size: 90px;
+            color: #F1F6F9;
+           }
+
+           .boxArea h6{
+            margin-bottom: 10px;
+            color: #F1F6F9;
+            font-size: 20px;
+            font-family: 'Sora', sans-serif;
+           }
+
+           .boxArea:hover{
+            background-color: #F1F6F9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+           }
+
+           .boxArea:hover i{
+                color: #394867;
+           }
+
+           .boxArea:hover h6{
+                color: #18233a;
+                font-size: 25px;
+           }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="schoolName">CANTERBURY HIGH SCHOOL</label>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a class="active" href="academics.html">ACADEMICS</a></li>
+                <li><a href="extracurriculars.html">EXTRA-CURRICULARS</a></li>
+                <li><a href="contacts.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <footer>
+            <div class="container">
+                <div class="content">
+                    <div class="boxArea">
+                        <a href="biology-laboratory.html">
+                            <div class="icon">
+                                <i class="fa-solid fa-microscope"></i>
+                            </div>
+                             <h6>Biology Laboratory</h6>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <div class="boxArea">
+                        <a href="english-sonnets.html">
+                            <div class="icon">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <h6>Sonnets Collection</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

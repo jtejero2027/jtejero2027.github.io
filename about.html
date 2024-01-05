@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html LANG="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <TITLE>About Us</TITLE>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            } 
+        
+            body{
+                background: #9BA4B5;
+            }
+
+            nav{
+                background: #394867;
+                height: 70px;
+                width: 100%;
+            }
+
+            label.schoolName{
+                color: #F1F6F9;
+                font-family: 'Sora', sans-serif;
+                font-size: 25px;
+                line-height: 70px;
+                padding: 0 50px;  
+            }
+
+            nav ul{
+                float: right;
+                margin-right: 20px;
+            }
+
+            nav ul li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+
+            nav ul li a{
+                color: #F1F6F9;
+                font-family: 'Comfortaa', sans-serif;
+                font-size: 14px;
+                padding: 7px 13px;
+                border-radius: 3px;
+            }
+
+           a.active,a:hover{
+            background-color: #58698a;
+            transition: .5s;
+           } 
+
+           .checkbtn{
+            font-size: 25px;
+            color:#F1F6F9;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+           }
+
+           #check{
+            display: none;
+           }
+
+           @media (max-width: 1194px){
+            label.schoolName{
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            nav ul li a{
+                font-size: 12px;
+            }
+           }
+
+           @media (max-width: 1020px){
+                .checkbtn{
+                    display: block;
+                }
+                label.schoolName{
+                    font-size: 17px;
+                }
+                ul{
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background:#18233a;
+                    top: 70px;
+                    left: -100%;
+                    text-align: center;
+                    transition: all .5s;
+                }
+                nav ul li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                }
+
+                nav ul li a{
+                    font-size: 20px;
+                }
+                a:hover,a.active{
+                    background: none;
+                    color: #58698a;
+                }
+                #check:checked ~ ul{
+                    left:0;
+                }
+           }
+
+           footer{
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+           }
+
+           .intro{
+                padding: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+           }
+
+           .boxArea{
+                width: 80%;
+                margin: 25px;
+                padding: 40px;
+                background-color: #F1F6F9;
+                border-radius: 25px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+           }
+           .boxArea2{
+                width:30%;
+                margin: 20px;
+                padding: 30px;
+                background-color: #babac9;
+                border-radius: 25px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                height: fit-content;
+           }
+
+           .boxArea h6{
+            margin-bottom: 10px;
+            color: #18233a;
+            font-size: 35px;
+            font-family: 'Sora', sans-serif;
+            align-items: center;
+           }
+
+           .boxArea p{
+            font-family: 'Comfortaa', sans-serif;
+            color: #18233a;
+            font-size: 18px;
+           }
+           hr{
+            height:5px;
+            background-color: #18233a;
+           }
+           img{
+            width:100%;
+            height:100%;
+            padding: 9px;
+            border-radius: 60px;
+           }
+           
+           .wrapper{
+            background-color: #4a5066;
+            display:flex;
+            max-width: 100%;
+            width: 100%;
+            padding-bottom: 1%;
+            padding-top: 1%;
+            flex-wrap: wrap;
+            justify-content: center;
+           }
+
+           
+           .content h1{
+            font-size: 100%;
+            color: #2e3c6b;
+            font-family: 'Sora', sans-serif;
+            text-align: center;
+           }
+           .content p{
+            font-size: 100%;
+            font-family: 'Comfortaa', sans-serif;
+            text-align: center;
+            justify-content: center;
+           }
+            h1 {
+            color:#18233a;
+            font-size: 50px;
+           }
+           .divider{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            height: 190px;
+            width:100%;
+            background-color:#182136;
+            border-top: dotted 10px #b7b8bd;
+            border-bottom:dotted 10px #70788e ;
+           }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="schoolName">CANTERBURY HIGH SCHOOL</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a class="active" href="about.html">ABOUT</a></li>
+            <li><a href="academics.html">ACADEMICS</a></li>
+            <li><a href="extracurriculars.html">EXTRA-CURRICULARS</a></li>
+            <li><a href="contacts.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="intro">
+            <div class="boxArea">   
+                <h6>History</h6> <hr> <br>
+                <p>
+                    Canterbury High School is a renowned educational institution with a rich 
+                    history that spans several decades. Established in the mid-20th century, 
+                    the school was founded with a vision to provide students with a comprehensive 
+                    and innovative education that combined academic excellence with a focus on the arts. <br> <br>
+                    Over the years, Canterbury High School has continued to evolve and adapt to the 
+                    changing educational landscape. The introduction of advanced technology into the
+                    curriculum, along with a strong emphasis on interdisciplinary studies, has 
+                    positioned the school as a leader in preparing students for the challenges of the modern world.
+                    Throughout its history, Canterbury High School has fostered a strong sense of community among its
+                    students, alumni, and faculty. Annual events, alumni reunions, and collaborative projects have created
+                    a network of individuals who share a common bond forged within the halls of the school. <br> <br>
+                    As Canterbury High School looks toward the future, it remains dedicated to its founding principles of
+                    academic excellence and a celebration of the arts. The school continues to attract students who seek 
+                    a well-rounded education that prepares them not only for success in their chosen fields but also for a 
+                    lifetime of intellectual curiosity and creative expression.
+                </p>
+            </div>
+        </div>
+        <br> <br> <h1> Teachers and Administrators</h1> <br>
+        <div class="wrapper">
+            <div class="boxArea2">
+                <img src="teacher1.jpg" alt="TCH1">
+                <div class="content">
+                    <h1> Yunjin Gonzales</h1>
+                    <p> Chemistry Teacher</p>
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="teacher2.jpg" alt="TCH2">
+                <div class="content">
+                    <h1> Manchae Cruz</h1>
+                    <p> Math Teacher</p>
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="teacher3.jpg" alt="TCH3">
+                <div class="content">
+                    <h1> Chaewon MyWife</h1>
+                    <p> Biology Teacher</p>
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="teacher4.jpg" alt="TCH4">
+                <div class="content">
+                    <h1> Soobin Rivera </h1>
+                    <p> Earth Science Teacher</p>
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="teacher5.jpg" alt="TCH5">
+                <div class="content">
+                    <h1> Jake Reid</h1>
+                    <p> History Teacher</p>
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="teacher6.jpg" alt="TCH6">
+                <div class="content">
+                    <h1> Heesung Padilla</h1>
+                    <p> English Teacher</p> 
+                </div>
+            </div> 
+            <div class="divider">
+            </div>
+            <div class="boxArea2">
+                <img src="administrator1.jpg" alt="ADM1">
+                <div class="content">
+                    <h1> Gaeul Tejero</h1>
+                    <p> Campus Director 1</p> 
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="administrator2.jpg" alt="ADM2">
+                <div class="content">
+                    <h1> Bae Ko</h1>
+                    <p> Campus Director 2</p> 
+                </div>
+            </div>
+            <div class="boxArea2">
+                <img src="administrator3.jpg" alt="ADM3">
+                <div class="content">
+                    <h1> J Inocencio</h1>
+                    <p> Campus Director 3</p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <TITLE>Academics</TITLE>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            } 
+        
+            body{
+                background: #9BA4B5;
+            }
+
+            footer{
+                width: 100%;
+            }
+
+            nav{
+                background: #394867;
+                height: 70px;
+                max-width:100%;
+            }
+
+            label.schoolName{
+                color: #F1F6F9;
+                font-family: 'Sora', sans-serif;
+                font-size: 25px;
+                line-height: 70px;
+                padding: 0 50px;  
+            }
+
+            nav ul{
+                float: right;
+                margin-right: 20px;
+            }
+
+            nav ul li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+
+            nav ul li a{
+                color: #F1F6F9;
+                font-family: 'Comfortaa', sans-serif;
+                font-size: 14px;
+                padding: 7px 13px;
+                border-radius: 3px;
+            }
+
+           a.link.active,a:hover{
+            background-color: #58698a;
+            transition: .5s;
+           } 
+
+           .checkbtn{
+            font-size: 25px;
+            color:#F1F6F9;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+           }
+
+           #check{
+            display: none;
+           }
+
+           .sonnet-contents{
+            display: block;
+            align-items: center;
+            justify-content: center;
+           }
+
+           .page-title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5vw;
+            width: 100%;    
+           }
+
+           .page-title h1{
+            font-family: 'Sora', sans-serif;
+            font-size: 45px;
+            color: #18233a;
+            background-color: #F1F6F9;
+            padding: 15px 45px 15px 45px;
+            border-radius: 30px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            display:inline-block;
+           }
+
+           .line{
+            display: flex;
+            height: 1px;
+            background-color: #18233a;
+            border: none;
+            width: 90%;
+            text-align: center;
+            margin: 10px 10px;
+           }
+
+           .list{
+            align-self: center;
+            max-width: 100%;
+           }
+
+           .col:hover{
+            background-color: #F1F6F9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+           }
+
+           .sonnets{
+            width: 100%;
+           }
+
+           .sonnets h1{
+            font-family: 'Sora', sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding: 30px 15px;
+           }
+
+           .sonnets h2{
+            font-family: 'Sora', sans-serif;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+           }
+
+           .sonnets p{
+            font-family: 'Comfortaa', sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 18px;
+            padding: 12px;
+           }
+
+           .section1{
+            width: 100%;
+            height: 550px;
+            color: #18233a;
+            background-color: #F1F6F9;
+            max-height: fit-content;
+            height: fit-content;
+           }
+
+           .section2{
+            width: 100%;
+            height: 550px;
+            color: #F1F6F9;
+            background-color: #394867;
+            height: fit-content;
+           }
+
+           .container{
+                padding: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+           }
+
+           .buttons{
+                width: 300px;
+                margin: 10px;
+                padding: 20px;
+                background-color: #18233a;
+                border-radius: 25px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                transition: all .5s ease-in-out;
+           }
+
+           .buttons h1{
+            margin-bottom: 5px;
+            color: #F1F6F9;
+            font-size: 20px;
+            font-family: 'Sora', sans-serif;
+           }
+
+           .buttons:hover{
+            background-color: #F1F6F9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+           }
+
+           .buttons:hover h1{
+                color: #18233a;
+           }
+
+           @media (max-width: 1194px){
+            label.schoolName{
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            nav ul li a{
+                font-size: 12px;
+            }
+           }
+
+           @media (max-width: 1020px){
+                .checkbtn{
+                    display: block;
+                }
+                label.schoolName{
+                    font-size: 17px;
+                }
+                nav ul{
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background:#18233a;
+                    top: 70px;
+                    left: -100%;
+                    text-align: center;
+                    transition: all .5s;
+                }
+                nav ul li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                }
+
+                nav ul li a{
+                    font-size: 20px;
+                }
+                a:hover,a.active{
+                    background: none;
+                    color: #58698a;
+                }
+                #check:checked ~ ul{
+                    left:0;
+                }
+           }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="schoolName">CANTERBURY HIGH SCHOOL</label>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a class="active" href="academics.html">ACADEMICS</a></li>
+                <li><a href="extracurriculars.html">EXTRA-CURRICULARS</a></li>
+                <li><a href="contacts.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <div class="sonnet-contents">
+                <div class="page-title"><h1>[Sonnet Collection]</h1></div>
+                <div class="sonnets">
+                    <section class="section1" id="sonnet1">
+                        <div class="sonnet">
+                            <h1>Catastrophic Longing</h1>
+                            <p>
+                                A sickly, craggy complexion overcoming your visage, <br>
+                                As I attend to you even in the midst of adversity.<br>
+                                Is it fitting to talk about “timing” as if time is a commodity?<br>
+                                To let your pain break my soul, my village?<br><br>
+                                Stemming from hatred and a broken image.<br>
+                                My ruined mind, caused by your perifidy,<br>
+                                Filled to the brim with infirmity,<br>
+                                Rest and comfort now a distant privilege.<br><br>
+                                Needing a pillar is not unique only to you.<br>
+                                Many thoughts I wish to say, but will it be all for nought?<br>
+                                When I just want to love and your pain does not accrue.<br><br>
+                                Inner demons you hold accountable but is it true?<br>
+                                From reciprocating my love, or is it just your wish to not?<br>
+                                Make me just a part of your past, is that what you're thinking too? 
+                            </p>
+                            <h2>- John Gabriel Tejero</h2>
+                        </div>
+                    </section>
+                    <section class="section2" id="sonnet2">
+                        <div class="sonnet">
+                            <h1>"Us" Or Just "You" And "Me"?</h1>
+                            <p>
+                                Staying for support, I accompany you on the most bitter of days<br>
+                                Your eyes devoid of life and body not at all spared from lethargy<br>
+                                You push me off with thorns though I want you only to feel my embrace<br>
+                                Do you know you're placing me and us in fear and jeopardy?<br><br>
+                                Solitary and lonesomeness , is that what you're feeling?<br>
+                                Negatives in that wide spectrum of emotion<br>
+                                Your inner thoughts now revealing.<br>
+                                You are never alone so please go into motion.<br><br>
+                                This and that you blame, but never yourself<br>
+                                The wounds that you inflict, do you think I alone can suture?<br>
+                                The memories of us, do you just want to put away on a shelf?<br>
+                                The us in the present, do you want just to be “you” and “me” in the future?<br><br>
+                                Stopping our progress, is it me or is it you?<br>
+                                That’s obstructing this relationship, please give me a clue!
+                            </p>
+                            <h2>- John Gabriel Tejero</h2>
+                        </div>
+                    </section>
+                    <section class="section1" id="sonnet3">
+                        <div class="sonnet">
+                            <h1>Letting Go</h1>
+                            <p>
+                                It hurts to be something;<br>
+                                It's worse to be nothing with you.<br>
+                                Healing begins anew,<br>
+                                Leaving behind a lingering sting.<br><br>
+                                Finding the strengths to bring<br>
+                                A brand new way to renew<br>
+                                A whole new life without you<br>
+                                Yet with each step, memories cling.<br><br>
+                                There’s no solution; we’ll never last.<br>
+                                Why can’t I let go of this?<br>
+                                Our memories, now remnants of our past.<br><br>
+                                Let me find my way, please<br>
+                                To mend my wounds in a cast<br>
+                                As my life without you turns into an abyss.
+                            </p>
+                            <h2>- Alyanna Martina Inocencio</h2>
+                        </div>
+                    </section>
+                    <section class="section2" id="sonnet4">
+                        <div class="sonnet">
+                            <h1>Lost Pathways</h1>
+                            <p>
+                                Autumn air cold as an icy frozen sea<br>
+                                But with you felt like home and grace<br>
+                                The feeling of hollowness consumes me<br>
+                                Because our sparks faded, like a ghostly trace<br><br>
+                                Maybe I asked for too much?<br>
+                                Maybe this thing was a masterpiece?<br>
+                                All I asked was your love<br>
+                                I’m still trying to find it, my peace<br><br>
+                                You kept me hidden like a secret to the world<br>
+                                But I kept you like a sacred oath<br>
+                                ‘Till you decided to break me like glass pearl.<br>
+                                Maybe I was foolish to even hope<br><br>
+                                My heart and mind still reminisce<br>
+                                Our shared bittersweet bliss
+                            </p>
+                            <h2>- Alyanna Martina Inocencio</h2>
+                        </div>
+                    </section>
+                    <section class="section1" id="sonnet5">
+                        <div class="sonnet">
+                            <h1>Yearning For More</h1>
+                            <p>
+                                In the corridors of my mind, thoughts of you I wield,<br>
+                                I’ve tried to halt them, as heaven knows.<br>
+                                Must I linger to see how this tale goes,<br>
+                                Longing for the day my wounded heart is healed?<br><br>
+                                Within my heart’s covert chambers, where desire’s concealed,<br>
+                                Should I embrace my feelings, holding love close?<br>
+                                Or do I hinder them, arresting their growth?<br>
+                                Would you fathom the ache, hidden and sealed?<br><br>
+                                I let go of the anchor that held love’s sail,<br>
+                                Moving forward knowing you won’t look back.<br>
+                                Acceptance to soothe a heart that yearned.<br><br>
+                                I’ll meet someone whose love won’t frail,<br>
+                                I’ll find someone whose love won’t lack,<br>
+                                You're not the one, I’ve finally learned.
+                            </p>
+                            <h2>- Sabria Claire Ko</h2>
+                        </div>
+                    </section>
+                    <section class="section2" id="sonnet6">
+                        <div class="sonnet">
+                            <h1>Loved and Lost You</h1>
+                            <p>
+                                In days of yore, when I held you close by, <br>
+                                Patience, I should not have provoked.<br>
+                                My ego fueled your heart’s cries,<br>
+                                Now to reclaim your love is a path I cannot evoke.<br><br>
+                                From my acts of sheer folly, I watched you depart, <br>
+                                A throne of regrets, my soul cannot help but claim.<br>
+                                My negligence, a poison to the heart,<br>
+                                In silent agony, I bear love's blame.<br><br>
+                                Had I been true, in loving you,<br>
+                                A symphony of joy, our hearts would weave.<br>
+                                But alas, my choices left us both blue, <br>
+                                Now shadows dance, and bitter tears deceive.<br><br>
+                                At long last, your heart has been unbound,<br>
+                                With another man, you’ll need not frown.
+                            </p>
+                            <h2>- Sabria Claire Ko</h2>
+                        </div>
+                    </section>
+                </div>
+                <div class="container">
+                    <div class="buttons">
+                        <a href="academics.html">
+                            <h1>Go Back</h1>
+                        </a>
+                    </div>
+    
+                    <div class="buttons">
+                        <a href="biology-laboratory.html">
+                            <h1>Biology Laboratory</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

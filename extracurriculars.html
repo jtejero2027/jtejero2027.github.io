@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html LANG="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Extracurriculars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+    <style>
+        section{
+            display: block;
+        }
+        body {
+            background-color: #9BA4B5;
+        }
+       *{
+            padding: 0;        
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        } 
+        nav{
+            background: #394867;
+            height: 70px;
+            width: 100%;
+        }
+        label.schoolName{
+            color: #F1F6F9;
+            font-family: 'Sora', sans-serif;
+            font-size: 25px;
+            line-height: 70px;
+            padding: 0 50px;  
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color: #F1F6F9;
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 14px;
+            padding: 7px 13px;
+            border-radius: 3px;
+        }
+        a.active,a:hover{
+            background-color: #58698a;
+            transition: .5s;
+        } 
+        .checkbtn{
+            font-size: 25px;
+            color:#F1F6F9;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width: 1194px){
+            label.schoolName{
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            nav ul li a{
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 1020px){
+            .checkbtn{
+                display: block;
+            }
+            label.schoolName{
+                font-size: 17px;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background:#18233a;
+                top: 70px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a:hover,a.active{
+                background: none;
+                color: #58698a;
+            }
+            #check:checked ~ ul{
+                left:0;
+            }
+        }
+        header{
+            font-size: 30px;
+            font-family: sora, sans-serif;
+        }
+        footer{
+            margin: 5vw;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Comfortaa', sans-serif;
+        }
+        h4{
+            font-size: 25px;
+            font-family: 'Comfortaa', sans-serif;
+        }
+        .row{
+            font-size: 15px;
+            font-family: 'Comfortaa', sans-serif;
+            text-align: center;
+        }
+        .container{
+            display:flex;
+        }
+        .clubs, .activities, .compe, .gen-info{
+            background: #F1F6F9;
+            border-radius: 4px;
+            border: 1vw;
+            padding: 30px 60px 40px 40px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            background-size:contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align:center;
+            margin:auto;
+            padding:30px 60px 40px 40px;
+            transition: all .5s;
+            max-width: 100%;
+            flex: 1;
+            padding: 1em;
+            overflow: hidden;
+            color:#0a1d44;
+        }
+        .clubs:hover{
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.07);
+        }
+        #ACAD{
+            text-align: center;
+        }
+        #SPORT{
+            text-align: center;
+        }
+        #HOM-EC{
+            text-align: center;
+        }
+        .label{
+            font-size: x-large;
+        }
+        img {
+            float: left;
+            max-width: 70%;
+            max-height: 2%;
+        }
+        blockquote {
+            font: 10px;
+        }
+        .comp{
+            text-align:center;
+        }
+         
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="schoolName">CANTERBURY HIGH SCHOOL</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="academics.html">ACADEMICS</a></li>
+            <li><a class="active" href="extracurriculars.html">EXTRA-CURRICULARS</a></li>
+            <li><a href="contacts.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        Extra-Curriculars
+    </header>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-14">
+                    <div class="gen-info">
+                    <div class = "label"><b><a href = "#ALA">
+                        CLUBS AND ALAS</a>
+                    </b></div><br>
+                    Canterbury High School also offers a wide variety of extra-curricular activities available for students to enjoy.
+                    In order to take a break from academics, or to embrace them even further, students can join up to 3 clubs!
+                    <br>
+                    The clubs are divided into three categories: the <b><a href = "#ACAD">ACADEMIC CLUBS</a></b>, <b><a href = "#SPORT">SPORTS CLUBS</a></b> and <b><a href = "#HOME-EC">HOME-ECONOMIC CLUBS</a></b>
+                    <br>
+                    <br>
+                    <div class="label"><b><a href="#COMPE">
+                        COMPETITIONS AND ACTIVITIES</a>
+                    </b></div><br>
+                    Aside from clubs, our school also hosts and participates in various competitions from throughout the world.
+                    Given below are competitions that are currently accepting participants and challengers.
+                </div></div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div id="ALA">
+            <h4>Clubs and ALA</h4>
+                <div id="ACAD">
+                    <p><b>Academic Clubs</b></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(PHYSICS.png);">
+                        <b> PHYSICS CLUB <br><br>
+                        The Physics Club is a student-led organization that celebrates the study of physics among its members. Through regular physics sessions, experiments, and competitions, members can enhance their scientific knowledge, improve their analytical skills, and develop their creativity. Join us in measuring, calculating, and understanding our way to physics wonders!</b>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(MATH.png);">
+                        <b>MATHEMATICS CLUB<br><br>
+                        The Mathematics Club is a student-led organization that fosters a love for mathematics through regular math sessions, workshops, and competitions. Members can learn various math concepts, improve their problem-solving abilities, and develop their logical thinking skills. Join us in calculating, reasoning, and solving our way to math excellence!</b>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(CHEM.png);">
+                        <b>CHEMISTRY CLUB<br><br>
+                        The Chemistry Club is a student-led organization that promotes the study of chemistry among its members. Through regular chemistry sessions, experiments, and competitions, members can enhance their scientific knowledge, improve their analytical skills, and develop their creativity. Join us in mixing, reacting, and discovering our way to chemistry wonders!</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="SPORT">
+        <p><b>Sports Clubs</b></p>
+        <div class="container"> 
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(BADMINTON.png);">
+                        <b> BADMINTON CLUB <br><br>
+                        The Badminton Club is a student-led organization that promotes the sport of badminton among its members. Through regular practices, games, and tournaments, members can enhance their physical fitness, teamwork abilities, and badminton skills. Join us in serving, smashing, and scoring our way to victory!</b>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(VOLLEY.png);">
+                        <b>VOLLEYBALL CLUB<br><br>
+                        The Volleyball Club is a student-led organization that fosters a love for volleyball among its members. Through regular practices, games, and tournaments, members can develop their athleticism, teamwork, and leadership skills. The club provides an opportunity for individuals to enjoy the thrill of competition while improving their volleyball abilities. Join us in serving, spiking, and blocking our way to victory!</b>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(BASKET.png);">
+                        <b>BASKETBALL CLUB<br><br>
+                        The Basketball Club is a student-led organization that aims to promote basketball among its members. Through regular practices, intramural games, and competitive tournaments, members can enhance their physical fitness, leadership abilities, and basketball skills. The club provides an opportunity for individuals to have fun, make new friends, and compete at various levels. Join us in dribbling, shooting, and scoring our way to success!</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="HOME-EC">
+        <p><b>Home Economic Clubs</b></p>
+        <div class="container"> 
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(SEW.png);">
+                        <b> SEWING CLUB <br><br>
+                        The Sewing Club is a student-led organization that teaches members the art of sewing through regular workshops, projects, and competitions. Members can learn various sewing techniques, improve their creativity, and develop their hand-eye coordination. Join us in stitching, threading, and creating our way to fashion!</b>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(GARDEN.png);">
+                        <b>GARDENING CLUB<br><br>
+                        The Gardening Club is a student-led organization that fosters a love for gardening through regular gardening sessions, workshops, and competitions. Members can learn various gardening techniques, improve their environmental awareness, and develop their patience and perseverance. Join us in planting, watering, and growing our way to nature's beauty!</b>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="clubs" style="background-image: url(COOKING.png);">
+                        <b>COOKING & BAKING CLUB<br><br>
+                        The Cooking Club is a student-led organization that celebrates the art of cooking through regular cooking sessions, food tastings, and competitions. Members can learn various recipes, improve their culinary skills, and develop their teamwork abilities. Join us in chopping, mixing, and cooking our way to deliciousness!</b>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    </div>
+
+    <div id="COMPE">
+        <h4>Contests and Activities</h4>
+        <div class="container">
+            <div class="comp">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="compe">
+                            <b style="font-size: 40px;"> INTER-CAMPUS SCIENTIFIC FEUD </b><br><br>
+                            <img src = "SCIENCE.png" alt="SCI">
+                            <blockquote>
+                            All Canterbury High School Campuses are invited to participate in the "INTER-CAMPUS SCIENTIFIC FEUD" wherein 
+                            selected students may get the chance to fight other participants of other campuses in a battle of wits in the field of sciences. Students will debate about an assigned topic, or answer quizbees.
+                            The winning contestant will recieve a cash prize of 10,000Php as well as to their assigned adviser.
+                <br>
+                <br>
+                <br>
+                            <b style="font-size:x-large;">FOR INQUIRIES PLEASE CONTACT:</b>
+                <br>
+                            <b style="font-size: larger;">BIOLOGY UNIT HEAD:<br>
+                            CHEMISTRY UNIT HEAD:<br>
+                            PHYSICS UNIT HEAD:<br>
+                            INTEGRATED SCIENCE UNIT HEAD:
+                </b>
+                </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="compe">
+                            <b style="font-size: 40px;"> COOK OFF</b><br><br>
+                            <img src = "COOK.png" alt="COOK">
+                            <blockquote>At Canterbury High School, the cook-off is an annual event where students show off their cooking skills. In the school's kitchen, they create a three-course meal using surprise ingredients. Judges taste and score based on presentation, flavor, and originality. The winner gets a trophy and a chance to compete regionally. It's a fun and friendly competition that brings students together.
+                    <br>
+                    <br>
+                            <b style="font-size: x-large;">FOR INQUIRIES PLEASE CONTACT:</b>
+                    <br>
+                            <b style="font-size: larger;">GUIDANCE UNIT HEAD:
+                    </b>
+                </blockquote>
+                        </div>
+                    </div>
+                </div>
+                    <br>
+                
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="compe">
+                                <b style="font-size: 40px;">SPORTS FEST</b><br><br>
+                                <img src = "SPORTS.png" alt="SPORT">
+                                <blockquote>Canterbury High School's annual Sports Fest is a thrilling three-day event filled with excitement and friendly competition. Students come together to showcase their skills in three popular sports: badminton, volleyball, and basketball. The festivities kick off with badminton, where players from different houses compete in singles and doubles matches. Next up is volleyball, where teams battle it out on the court in a round-robin tournament. The final day of the fest is dedicated to basketball, where students play in a knockout tournament to determine the ultimate champions. The entire school community comes out to cheer on their favorite players and houses, making this event a highlight of the school year.
+                    <br>
+                    <br>
+                    <br>
+                                <b style="font-size: x-large;">FOR INQUIRIES PLEASE CONTACT:</b>
+                    <br>
+                                <b style="font-size: larger;">BADMINTON CLUB SECRETARY:<br>
+                                    VOLLEYBALL CLUB SECRETARY:<br>
+                                    BASKETBALL CLUB SECRETARY:<br>
+                                    PEHM UNIT HEAD:
+                                </b>
+                            </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="compe">
+                                <b style="font-size: 40px;">BOOK FAIR</b><br><br>
+                                <img src ="BOOKFAIR.png" alt="FAIR">
+                                <blockquote>Canterbury High School's annual Book Fair is a beloved tradition that brings students and teachers together to celebrate the joy of reading. The fair is filled with an extensive collection of books for all ages and interests, from classic literature to bestsellers, biographies, and graphic novels. The school's library transforms into a bustling marketplace, with students eagerly browsing the shelves, chatting with librarians, and making their selections. The fair also features author visits, book signings, and reading sessions by popular authors. It's a wonderful opportunity for students to discover new books, connect with fellow readers, and foster a love for learning.
+                <br>
+                <br>
+                <br>
+                                <b style="font-size: x-large;">FOR INQUIRIES PLEASE CONTACT:</b>
+                <br>
+                                <b style="font-size: larger;">LIBRARIAN:<br>
+                                    STUDENT COUNCIL SECRETARY:
+                                </b>
+                            </blockquote>
+                            </div>
+                        </div>
+                    </div> 
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</footer>
+</body>
+
+</html>
